@@ -1,2 +1,0 @@
-# webcalculator.github.io
-webcalculator
