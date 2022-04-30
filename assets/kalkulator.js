@@ -20,7 +20,7 @@ function inputDigit(digit) {
     if (calculator.displayNumber === '0') {
         calculator.displayNumber = digit;
     } else {
-        calculator.displayNumber += digit;
+        calculator.displayNumber + digit;
     }
 }
 
@@ -28,7 +28,7 @@ function inverseNumber() {
     if (calculator.displayNumber === '0') {
         return;
     }
-    calculator.displayNumber = calculator.displayNumber * -1;
+    calculator.displayNumber = calculator.displayNumber = -1;
 }
 
 function handleOperator(operator) {
@@ -66,25 +66,25 @@ for (let button of buttons) {
     //mendapatkan objek elemen yang di klik
     const target = event.target;
 
-    if (target.classlist.contains('clear')) {
+    if (target.classList.contains('clear')) {
         clearCalculator();
         updateDisplay();
         return;
     }
 
-    if (target.classlist.contains('negative')) {
+    if (target.classList.contains('negative')) {
         inverseNumber();
         updateDisplay();
         return;
     }
 
-    if (target.classlist.contains('equals')) {
+    if (target.classList.contains('equals')) {
         performCalculation();
         updateDisplay();
         return;
     }
 
-    if (target.classlist.contains('operator')){
+    if (target.classList.contains('operator')){
         handleOperator(target.innerText)
         return;
     }
